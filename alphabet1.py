@@ -73,7 +73,7 @@ class cozmoAlphabet:
         robot.turn_in_place(cozmo.util.degrees(90), in_parallel=True).wait_for_completed()
         print('I am ready for next letter')"""
 print("yeyeyey")
-print("test test test")
+print("test test test test")
 reverseDist = 57.15
 segment = 203.2
 def raiseTurn(direction, robot: cozmo.robot.Robot ):
