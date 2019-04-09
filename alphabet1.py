@@ -136,7 +136,7 @@ def cozmoAlphabet(robot: cozmo.robot.Robot):
             robot.turn_in_place(cozmo.util.degrees(90), in_parallel=True).wait_for_completed()  # turns right
             robot.drive_straight(cozmo.util.distance_mm(space), cozmo.util.speed_mmps(200)).wait_for_completed()
             robot.turn_in_place(cozmo.util.degrees(90), in_parallel=True).wait_for_completed()  # turns right
-            print('I drew A and am ready for next letter')
+            print('I drew AA and am ready for next letter')
         if letter == 'B':
             robot.set_lift_height(0, 25).wait_for_completed()  # drop marker to ground
             robot.drive_straight(cozmo.util.distance_mm(segment), cozmo.util.speed_mmps(200)).wait_for_completed()
