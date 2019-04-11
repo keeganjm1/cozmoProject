@@ -6,6 +6,7 @@ import errno
 from socket import error as socket_error
 
 # need to get movement info
+from cozmo import robot
 from cozmo.util import degrees, distance_mm, speed_mmps
 """
 segment = 203.2
@@ -78,6 +79,9 @@ inch = 25.4
 doubleInche = 51.0 #distance to move after raising lift before end of one line to adjust for turn
 reverseDist = 35.0
 segment = 203.2
+#BEFORE any turns
+
+
 def raiseTurn(direction, robot: cozmo.robot.Robot ):
     if direction == "L":
         robot.set_lift_height(1, 15).wait_for_completed()
@@ -105,8 +109,24 @@ def raiseTurn(direction, robot: cozmo.robot.Robot ):
         print ("Not a valid input for direction argument")
 
 
+def preTurn(robot: cozmo.robot.Robot):
+    robot.set_lift_height(1, 15).wait_for_completed()
+    robot.drive_straight(cozmo.util.distance_mm(doubleInche), cozmo.util.speed_mmps(125)).wait_for_completed()
+
+#Functions to simply raise or drop the lift (saves some typing)
+def raiseLift(robot: cozmo.robot.Robot):
+    robot.set_lift_height(1,15).wait_for_completed()
+def dropLift(robot: cozmo.robot.Robot):
+    robot.set_lift_height(0,15).wait_for_completed\
+        ()
+
+# Driving in a straight line
+# argument "dist_mm" should be positive if forward movement is desired, and negative otherwise.
+def driveStraight(dist_mm, robot: cozmo.robot.Robot):
+    robot.drive_straight(cozmo.util.distance_mm(dist_mm), cozmo.util.speed_mmps(125)).wait_for_completed()
 
 def cozmoAlphabet(robot: cozmo.robot.Robot):
+
     instructions = 'A'
     alphabetList = []
     print('yes')
@@ -231,9 +251,26 @@ def cozmoAlphabet(robot: cozmo.robot.Robot):
             robot.set_lift_height(1, 15).wait_for_completed()  # drop marker to ground
             robot.drive_straight(cozmo.util.distance_mm(space), cozmo.util.speed_mmps(200)).wait_for_completed()
             robot.turn_in_place(cozmo.util.degrees(90), in_parallel=True).wait_for_completed()
+
+        """ THIS IS AFTER IMPLEMENTATION OF REVERSEDIST"""
         if letter == 'F':
-            robot.set_lift_height(0, 15).wait_for_completed()  # drop marker to ground
-            robot.drive_straight(cozmo.util.distance_mm(segment), cozmo.util.speed_mmps(200)).wait_for_completed()
+            # Setup and drop Lift
+            robot.drive_straight(cozmo.util.distance_mm(-reverseDist), cozmo.util.speed_mmps(125)).wait_for_completed()
+            robot.set_lift_height(0, 15).wait_for_completed()
+            # Drive forward one full segment (Left vertical component of F
+            robot.drive_straight(cozmo.util.distance_mm(segment), cozmo.util.speed_mmps(125)).wait_for_completed()
+            # Preturn adjustmennts (call preTurn function)
+            preTurn(robot)
+            #turn right to tackle the high-horizontal component of F
+            raiseTurn("R", robot)
+            dropLift(robot)  # ready to draw
+            driveStraight(segment)
+            ##CONTINUE HERE.
+
+
+
+
+
 
 
 print("ththth")
