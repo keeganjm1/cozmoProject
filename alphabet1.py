@@ -156,6 +156,29 @@ def raiseTurnR135(robot):
     dropLift(robot)
     driveStraight(reverseDist, robot)
 
+def raiseTurn180(robot):
+    raiseLift(robot)
+    robot.turn_in_place(cozmo.util.degrees(-180), in_parallel=True).wait_for_completed()
+    driveStraight(-reverseDist, robot)
+    dropLift(robot)
+    driveStraight(reverseDist, robot)
+
+def raiseTurnR157(robot):
+    raiseLift(robot)
+    robot.turn_in_place(cozmo.util.degrees(-157.4), in_parallel=True).wait_for_completed()
+    driveStraight(-reverseDist, robot)
+    dropLift(robot)
+    driveStraight(reverseDist, robot)
+
+def raiseTurnL157(robot):
+    raiseLift(robot)
+    robot.turn_in_place(cozmo.util.degrees(157.4), in_parallel=True).wait_for_completed()
+    driveStraight(-reverseDist, robot)
+    dropLift(robot)
+    driveStraight(reverseDist, robot)
+
+def raiseTurnL20(robot):
+    robot.turn_in_place(cozmo.util.degrees(20), in_parallel=True).wait_for_completed()
 
 def cozmoAlphabet(robot: cozmo.robot.Robot):
 
