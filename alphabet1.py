@@ -182,7 +182,7 @@ def raiseTurnL20(robot):
 
 def cozmoAlphabet(robot: cozmo.robot.Robot):
 
-    instructions = 'V'
+    instructions = 'K'
     alphabetList = []
     print('yes')
     alphabetList.append(instructions)
@@ -788,6 +788,37 @@ def cozmoAlphabet(robot: cozmo.robot.Robot):
 
 
         if letter == "W":
+            dropLift(robot)
+            driveStraight(segment, robot)
+            raiseLift(robot)
+            driveStraight(-segment, robot)
+            preTurn(robot)
+            raiseTurn("R", robot)
+            dropLift(robot)
+            driveStraight(segment/2, robot)  # draw the first half of the bottom horizontal component first.
+            preTurn(robot)
+            raiseTurn("L", robot)
+            dropLift(robot)
+            driveStraight(segment/3, robot)
+            raiseLift(robot)
+            driveStraight(-segment/3, robot)
+            preTurn(robot)
+            raiseTurn("R", robot)
+            dropLift(robot)
+            driveStraight(segment/2, robot)
+            preTurn(robot)
+            raiseTurn("L", robot)
+            dropLift(robot)
+            driveStraight(segment, robot)
+            raiseLift(robot)
+            driveStraight(-segment, robot)
+            preTurn(robot)
+            raiseTurn("R", robot)
+            driveStraight(space)
+            preTurn(robot)
+            raiseTurn("L", robot)
+            # Done - needs to be tested/tweaked. - - - - 4/22
+
             pass
         if letter == "X":
             driveStraight(-reverseDist, robot)
