@@ -182,7 +182,7 @@ def raiseTurnL20(robot):
 
 def cozmoAlphabet(robot: cozmo.robot.Robot):
 
-    instructions = 'K'
+    instructions = 'V'
     alphabetList = []
     print('yes')
     alphabetList.append(instructions)
@@ -741,42 +741,41 @@ def cozmoAlphabet(robot: cozmo.robot.Robot):
             raiseTurn("L", robot)
             # Done - needs to be reviewed/tested - AC, 4/13
         if letter == "V":
+            raiseLift(robot)
             driveStraight(-reverseDist, robot)
+
             driveStraight(segment, robot)
             preTurn(robot)
             ####################################### doctored raiseTurn
             raiseLift(robot)
             robot.turn_in_place(cozmo.util.degrees(-(157.4)), in_parallel=True).wait_for_completed()
+
             driveStraight(-reverseDist, robot)
             #dropLift(robot)
             driveStraight(reverseDist, robot)
 
             dropLift(robot)
-            driveStraight(math.sqrt((1/4 * (segment**2))) + (segment**2))
+            driveStraight(math.sqrt((1 / 4 * segment ** 2) + (segment ** 2)), robot)
+            #driveStraight(math.sqrt((1/4 * (segment**2))) + (segment**2),robot)
+            raiseLift(robot)
             preTurn(robot)
 
-            robot.turn_in_place(cozmo.util.degrees(-(22.6)), in_parallel=True).wait_for_completed()
+            robot.turn_in_place(cozmo.util.degrees(135), in_parallel=True).wait_for_completed()
             driveStraight(-reverseDist, robot)
             dropLift(robot)
             driveStraight(reverseDist, robot)
-
-            preTurn(robot)
-            robot.turn_in_place(cozmo.util.degrees(157.4), in_parallel=True).wait_for_completed()
-            driveStraight(-reverseDist, robot)
             dropLift(robot)
+            driveStraight(math.sqrt((1 / 4 * segment ** 2) + (segment ** 2)), robot)
+            #driveStraight(math.sqrt((1 / 4 * (segment ** 2))) + (segment ** 2),robot)
+            preTurn(robot)
+
+            robot.turn_in_place(cozmo.util.degrees(-(158)), in_parallel=True).wait_for_completed()
+            driveStraight(-reverseDist, robot)
+
             driveStraight(reverseDist, robot)
 
-            dropLift(robot)
-            driveStraight(math.sqrt((1 / 4 * (segment ** 2))) + (segment ** 2))
-            preTurn(robot)
-
-            robot.turn_in_place(cozmo.util.degrees((22.6)), in_parallel=True).wait_for_completed()
-            driveStraight(-reverseDist, robot)
-            dropLift(robot)
-            driveStraight(reverseDist, robot)
-
-            preTurn(robot)
-            raiseTurn180(robot)
+            #preTurn(robot)
+            #raiseTurn180(robot)
             driveStraight(segment, robot)
             preTurn(robot)
             raiseTurn("L", robot)
