@@ -1,6 +1,7 @@
 "Program to make one cozmo draw/mark works by splitting them up into individual letters"
 
 import cozmo
+import math  # we'll need this for square roots.
 import socket
 import errno
 from socket import error as socket_error
@@ -76,18 +77,20 @@ class cozmoAlphabet:
 print("yeyeyey")
 print("test test test")
 inch = 25.4
-doubleInche = 51.0 #distance to move after raising lift before end of one line to adjust for turn
+doubleInche = 51.0  # distance to move after raising lift before end of one line to adjust for turn
 reverseDist = 35.0
 segment = 203.2
-#BEFORE any turns
+# BEFORE any turns
 
 
 def raiseTurn(direction, robot: cozmo.robot.Robot ):
     if direction == "L":
         robot.set_lift_height(1, 15).wait_for_completed()
         robot.turn_in_place(cozmo.util.degrees(90), in_parallel=True).wait_for_completed()  # turn left
-        robot.drive_straight(cozmo.util.distance_mm(-(reverseDist)),cozmo.util.speed_mmps(200)).wait_for_completed()
-        robot.set_lift_height(0, 15).wait_for_completed()
+        robot.drive_straight(cozmo.util.distance_mm(-reverseDist), cozmo.util.speed_mmps(200)).wait_for_completed()
+        # *********************************************************************************************************
+        robot.set_lift_height(0, 15).wait_for_completed()  # This may not work in every instance we need to turn
+        # *********************************************************************************************************
         robot.drive_straight(cozmo.util.distance_mm(reverseDist), cozmo.util.speed_mmps(200)).wait_for_completed()
     elif direction == "R":
         print("this is before raise")
@@ -97,7 +100,7 @@ def raiseTurn(direction, robot: cozmo.robot.Robot ):
         robot.turn_in_place(cozmo.util.degrees(-90)).wait_for_completed()  # turn right
         print("after turn")
         print("before reversing reverseDist")
-        robot.drive_straight(cozmo.util.distance_mm(-(reverseDist)), cozmo.util.speed_mmps(200)).wait_for_completed()
+        robot.drive_straight(cozmo.util.distance_mm(-reverseDist), cozmo.util.speed_mmps(200)).wait_for_completed()
         print("after reversing reverseDist")
         print("before dropping lift")
         robot.set_lift_height(0, 15).wait_for_completed()
@@ -125,6 +128,35 @@ def dropLift(robot: cozmo.robot.Robot):
 def driveStraight(dist_mm, robot: cozmo.robot.Robot):
     robot.drive_straight(cozmo.util.distance_mm(dist_mm), cozmo.util.speed_mmps(125)).wait_for_completed()
 
+def raiseTurnL45(robot):
+    raiseLift(robot)
+    robot.turn_in_place(cozmo.util.degrees(45), in_parallel=True).wait_for_completed()
+    driveStraight(-reverseDist)
+    dropLift(robot)
+    driveStraight(reverseDist)
+
+def raiseTurnR45(robot):
+    raiseLift(robot)
+    robot.turn_in_place(cozmo.util.degrees(-45), in_parallel=True).wait_for_completed()
+    driveStraight(-reverseDist)
+    dropLift(robot)
+    driveStraight(reverseDist)
+
+def raiseTurnL135(robot):
+    raiseLift(robot)
+    robot.turn_in_place(cozmo.util.degrees(135), in_parallel=True).wait_for_completed()
+    driveStraight(-reverseDist)
+    dropLift(robot)
+    driveStraight(reverseDist)
+
+def raiseTurnR135(robot):
+    raiseLift(robot)
+    robot.turn_in_place(cozmo.util.degrees(-135), in_parallel=True).wait_for_completed()
+    driveStraight(-reverseDist)
+    dropLift(robot)
+    driveStraight(reverseDist)
+
+
 def cozmoAlphabet(robot: cozmo.robot.Robot):
 
     instructions = 'A'
@@ -132,7 +164,7 @@ def cozmoAlphabet(robot: cozmo.robot.Robot):
     print('yes')
     alphabetList.append(instructions)
     print('no')
-    #segment = 203.2
+    # segment = 203.2
     space = 100
     left = 'L' #90
     right = 'R'#-90
@@ -209,15 +241,15 @@ def cozmoAlphabet(robot: cozmo.robot.Robot):
         if letter == 'B':
             robot.set_lift_height(0, 15).wait_for_completed()  # drop marker to ground
             robot.drive_straight(cozmo.util.distance_mm(segment), cozmo.util.speed_mmps(200)).wait_for_completed()
-            raiseTurn("R", robot)#turns right
+            raiseTurn("R", robot)  # turns right
             robot.drive_straight(cozmo.util.distance_mm(segment), cozmo.util.speed_mmps(200)).wait_for_completed()
-            raiseTurn("R", robot)#turns right
+            raiseTurn("R", robot)  # turns right
             robot.drive_straight(cozmo.util.distance_mm((segment / 2)),cozmo.util.speed_mmps(200)).wait_for_completed()
             raiseTurn("R", robot)
             robot.drive_straight(cozmo.util.distance_mm(segment), cozmo.util.speed_mmps(200)).wait_for_completed()
             robot.set_lift_height(1, 15).wait_for_completed()
             robot.drive_straight(cozmo.util.distance_mm((-segment)),cozmo.util.speed_mmps(200)).wait_for_completed()
-            raiseTurn("L", robot)#turns left
+            raiseTurn("L", robot)  # turns left
             robot.set_lift_height(0, 15).wait_for_completed()
             robot.drive_straight(cozmo.util.distance_mm((segment / 2)),cozmo.util.speed_mmps(200)).wait_for_completed()
             robot.set_lift_height(1, 15).wait_for_completed()
@@ -533,7 +565,7 @@ def cozmoAlphabet(robot: cozmo.robot.Robot):
         if letter == "N":
             pass
         if letter == "O":
-            #assuming this is a square O
+            # assuming this is a square O
             driveStraight(-reverseDist)
             preTurn(robot)
             raiseTurn("R", robot)
@@ -666,10 +698,72 @@ def cozmoAlphabet(robot: cozmo.robot.Robot):
         if letter == "W":
             pass
         if letter == "X":
-            pass
+            driveStraight(-reverseDist)
+            robot.turn_in_place(cozmo.util.degrees(-45), in_parallel=True).wait_for_completed()  # turn 45 degrees to
+            # the right
+            dropLift(robot)
+            driveStraight(math.sqrt(2*(segment**2)))  # The hypotenuse of a triangle with a = segment and b = segment is the square root of 2*segment^2.
+            preTurn(robot)
+            # we are at the top right corner now and need to turn left 135 degrees in order to drive straight to the
+            # left corner.
+            robot.turn_in_place(cozmo.util.degrees(135), in_parallel=True).wait_for_completed()
+            # Not sure if below will work.
+            driveStraight(-reverseDist)
+            dropLift(robot)
+            driveStraight(reverseDist)
+            driveStraight(math.sqrt(2*(segment**2)))  # This will hopefully draw from top left to bottom right.
+
+            preTurn(robot)
+            robot.turn_in_place(cozmo.util.degrees(45), in_parallel=True).wait_for_completed()  # This will line us
+            # back up, horizontally.
+            # All we have to do is move forward one space, turn left and we're all set.
+            driveStraight(space)
+            preTurn(robot)
+            raiseTurn("L")
+            # Done - I'm very uneasy about how this will go, but I forgot my robot so I can't test it now.
+            # - AC,  4/18
+
+
+
         if letter == "Y":
-            pass
+            preTurn(robot)
+            raiseTurn("R", robot)
+            driveStraight(segment/2)  # drive us to the bottom of the middle segment
+            preTurn(robot)
+            raiseTurn("L", robot)
+            dropLift(robot)
+            driveStraight(segment/2)  # draw the stem of Y
+            preTurn(robot)
+            raiseTurnL45(robot)  #draw the left diagonal of Y
+            dropLift(robot)
+            driveStraight(segment/2)  # the top prongs of Y should form an equilateral triangle with the top.
+            # I don't think there's any special math required.
+            preTurn(robot)
+            raiseTurnR135(robot)
+            driveStraight(segment/2)
+            preTurn(robot)
+            raiseTurnR135(robot)
+            dropLift(robot)
+            driveStraight(segment/2)  #this will draw from the top right portion back down to the stem
+            preTurn(robot)
+            raiseTurnL45(robot)
+            driveStraight(segment/2)  #traverse to the bottom of the stem.
+            preTurn(robot)
+            raiseTurn("L", robot)
+            driveStraight((segment/2) + space)  # this will drive the rest of the segment AND the space to the next one.
+            preTurn(robot)
+            raiseTurn("L", robot)
+            # DONE
+            # I'm still not sure if this will work though.
+            # AC - 4/18
+
         if letter == "Z":
+            driveStraight(segment)
+            preTurn(robot)
+            raiseTurn("R", robot)
+            dropLift(robot)
+            driveStraight(segment)  # we have drawn top vertical segment.
+
             pass
 
 
