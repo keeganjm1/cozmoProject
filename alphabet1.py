@@ -608,7 +608,35 @@ def cozmoAlphabet(robot: cozmo.robot.Robot):
             # Done - needs to be reviewed/tested - AC, 4/12
         # I'll need more time to get M,N's math down.
         if letter == "M":
-            pass
+            driveStraight(-reverseDist, robot)
+            dropLift(robot)
+            driveStraight(segment, robot)  # draw leftmost vertical component, end up in the top-left corner
+            preTurn(robot)
+            raiseTurn("R", robot)
+            dropLift(robot)
+            driveStraight(segment/2, robot)  # draw the first half of the horizontal component.
+            preTurn(robot)
+            raiseTurn("L", robot)
+            dropLift(robot)
+            driveStraight(segment/3, robot)  # draw the middle vertical component
+            raiseLift(robot)
+            driveStraight(-segment/3, robot)
+            preTurn(robot)
+            raiseTurn("L", robot)
+            dropLift(robot)
+            driveStraight(segment/2, robot)  # draw the second half of the horizontal component, end up in the top-right
+            # corner
+            preTurn(robot)
+            raiseTurn("R", robot)
+            dropLift(robot)
+            driveStraight(segment, robot)  # draw the right vertical component, end up in the bottom right corner
+            preTurn(robot)
+            raiseTurn("L", robot)
+            driveStraight(space)
+            preTurn(robot)
+            raiseTurn("L", robot)
+            # Ready to be tested - AC, 4/22
+
         if letter == "N":
             pass
         if letter == "O":
