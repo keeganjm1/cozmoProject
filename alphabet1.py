@@ -771,7 +771,7 @@ def cozmoAlphabet(robot: cozmo.robot.Robot):
             robot.turn_in_place(cozmo.util.degrees(45), in_parallel=True).wait_for_completed()
             driveStraight(space, robot)
             raiseTurn("L",robot)
-            
+
 
 
         if letter == "S":
