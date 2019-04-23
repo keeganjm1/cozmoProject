@@ -709,7 +709,37 @@ def cozmoAlphabet(robot: cozmo.robot.Robot):
         if letter == "Q":
             pass
         if letter == "R":
-            pass
+            driveStraight(-reverseDist,robot)
+            dropLift(robot)
+            driveStraight(segment, robot)
+            preTurn(robot)
+            raiseTurn("R", robot)
+            dropLift(robot)
+            driveStraight(segment, robot)
+            preTurn(robot)
+            raiseTurn("R", robot)
+            dropLift(robot)
+            driveStraight(segment / 2, robot)
+            preTurn(robot)
+            raiseTurn("R", robot)
+            dropLift(robot)
+            driveStraight(segment, robot)
+            preTurn(robot)
+            robot.turn_in_place(cozmo.util.degrees(180), in_parallel=True).wait_for_completed()
+            raiseLift(robot)
+            driveStraight(segment/2,robot)
+            preTurn(robot)
+            robot.turn_in_place(cozmo.util.degrees(-45), in_parallel=True).wait_for_completed()
+            dropLift(robot)
+            driveStraight(segment/2,robot)
+            raiseLift(robot)
+            preTurn(robot)
+            robot.turn_in_place(cozmo.util.degrees(45), in_parallel=True).wait_for_completed()
+            driveStraight(space, robot)
+            raiseTurn("L",robot)
+            
+
+
         if letter == "S":
             driveStraight(-reverseDist, robot)  # init
             preTurn(robot)
