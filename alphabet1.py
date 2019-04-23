@@ -707,7 +707,41 @@ def cozmoAlphabet(robot: cozmo.robot.Robot):
             raiseTurn("L", robot)
             #  Done - Still needs to be reviewed/tested - AC, 4/13
         if letter == "Q":
-            pass
+            driveStraight(-reverseDist, robot)
+            preTurn(robot)
+            raiseTurn("R", robot)
+            dropLift(robot)
+            driveStraight(segment, robot)  # draw bottom horizontal segment
+            preTurn(robot)
+            raiseTurn("L", robot)
+            dropLift(robot)
+            driveStraight(segment, robot)  # draw right vertical segment
+            preTurn(robot)
+            raiseTurn("L", robot)
+            dropLift(robot)
+            driveStraight(segment, robot)  # draw top horizontal segment
+            preTurn(robot)
+            raiseTurn("L", robot)
+            dropLift(robot)
+            driveStraight(segment, robot)  # draw the left vertical segment, will end up at bottom left corner
+            preTurn(robot)
+            raiseTurn("L", robot)
+            driveStraight(segment, robot)  # traverse the bottom horizontal edge
+            preTurn(robot)
+            raiseTurnR45(robot)
+            driveStraight(-segment/8, robot)
+            dropLift(robot)
+            driveStraight(segment/4, robot)  # this will draw the strikethrough of the Q, at a
+            # 45-degree angle through the bottom right corner.
+            raiseLift(robot)
+            driveStraight(-segment/8, robot)  # this should get us back to the bottom-right corner
+            preTurn(robot)
+            raiseTurnL45(robot)
+            driveStraight(space, robot)
+            preTurn(robot)
+            raiseTurn("L", robot)
+            # Should be done.  Ready for testing - AC, 4/23
+
         if letter == "R":
             driveStraight(-reverseDist,robot)
             dropLift(robot)
@@ -897,7 +931,7 @@ def cozmoAlphabet(robot: cozmo.robot.Robot):
             raiseTurn("L", robot)
             # Done - needs to be tested/tweaked. - - - - 4/22
 
-            pass
+
         if letter == "X":
             driveStraight(-reverseDist, robot)
             robot.turn_in_place(cozmo.util.degrees(-45), in_parallel=True).wait_for_completed()  # turn 45 degrees to
