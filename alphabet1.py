@@ -638,7 +638,27 @@ def cozmoAlphabet(robot: cozmo.robot.Robot):
             # Ready to be tested - AC, 4/22
 
         if letter == "N":
-            pass
+            driveStraight(-reverseDist, robot)
+            dropLift(robot)
+            driveStraight(segment, robot)  # draw the left vertical component
+            preTurn(robot)
+            raiseTurnR135(robot)
+            dropLift(robot)
+            driveStraight(math.sqrt(2 * (segment ** 2)), robot)  # this should take care of the diagonal segment
+            preTurn(robot)
+            raiseTurnL135(robot)
+            dropLift(robot)
+            driveStraight(segment, robot)  # this should draw the right vertical segment
+            raiseLift(robot)
+            driveStraight(-segment, robot)  # reverse back before we move to the next letter
+            preTurn(robot)
+            raiseTurn("R", robot)
+            driveStraight(space, robot)
+            preTurn(robot)
+            raiseTurn("L", robot)
+            # Done, ready for testing
+            # AC, 4/22
+
         if letter == "O":
             # assuming this is a square O
             driveStraight(-reverseDist, robot)
