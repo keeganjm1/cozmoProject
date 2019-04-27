@@ -937,7 +937,8 @@ def cozmoAlphabet(robot: cozmo.robot.Robot):
             robot.turn_in_place(cozmo.util.degrees(-45), in_parallel=True).wait_for_completed()  # turn 45 degrees to
             # the right
             dropLift(robot)
-            driveStraight(math.sqrt(2*(segment**2)), robot)  # The hypotenuse of a triangle with a = segment and b = segment is the square root of 2*segment^2.
+            driveStraight(math.sqrt(2*(segment**2)), robot)  # The hypotenuse of a triangle with a = segment and
+            # b = segment is the square root of 2*segment^2.
             preTurn(robot)
             # we are at the top right corner now and need to turn left 135 degrees in order to drive straight to the
             # left corner.
