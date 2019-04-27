@@ -209,8 +209,8 @@ def cozmoAlphabet(robot:cozmo.robot.Robot):
     print('no')
     # segment = 203.2
     space = 100
-    left = 'L' #90
-    right = 'R'#-90
+    left = 'L'  # 90
+    right = 'R'  # -90
     print(alphabetList)
     for letter in alphabetList:
         raiseLift(robot)
@@ -473,7 +473,7 @@ def cozmoAlphabet(robot:cozmo.robot.Robot):
 
 
 
-        """   A, B, C, D, E all need to be fixed yet."""
+
         if letter == 'F':
             raiseLift(robot)
             # Setup and drop Lift
@@ -767,7 +767,7 @@ def cozmoAlphabet(robot:cozmo.robot.Robot):
             raiseTurn("R", robot)
             dropLift(robot)
             driveStraight(segment, robot)  # second segment:
-            raiseLift(robot)# across the top
+            raiseLift(robot) # across the top
             preTurn(robot)
             raiseTurn("R", robot)
             dropLift(robot)
