@@ -9,7 +9,7 @@ from cozmo.util import degrees, distance_mm, speed_mmps
 
 def cozmo_program(robot: cozmo.robot.Robot):
     global instructions
-    """try:
+    try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     except socket_error as msg:
         robot.say_text("socket failed" + msg).wait_for_completed()
@@ -47,7 +47,7 @@ def cozmo_program(robot: cozmo.robot.Robot):
             # ---------------------------------------------------------
             # This is where you need to adjust the program
             # ---------------------------------------------------------
-"""
+
     myName1 = 1
     myName2 = 2
     myName3 = 3
