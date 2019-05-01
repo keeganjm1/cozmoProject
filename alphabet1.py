@@ -218,7 +218,7 @@ def turn180_by45(robot):
     robot.turn_in_place(cozmo.util.degrees(45), in_parallel=True).wait_for_completed()
 def cozmoAlphabet(robot:cozmo.robot.Robot):
 
-    instructions = 'X'
+    instructions = 'Z'
     #alphabetList = []
     newInsructions = instructions.split()
 
@@ -1396,9 +1396,9 @@ def cozmoAlphabet(robot:cozmo.robot.Robot):
             # left corner.
             robot.turn_in_place(cozmo.util.degrees(135), in_parallel=True).wait_for_completed()
             # Not sure if below will work.
-            driveStraight(-reverseDist, robot)
+            #driveStraight(-reverseDist, robot)
             #dropLift(robot)
-            driveStraight(reverseDist, robot)
+            driveStraight(segment, robot)
             robot.turn_in_place(cozmo.util.degrees(135), in_parallel=True).wait_for_completed()
             driveStraight(-reverseDist,robot)
             dropLift(robot)
@@ -1406,7 +1406,7 @@ def cozmoAlphabet(robot:cozmo.robot.Robot):
 
             preTurn(robot)
             robot.turn_in_place(cozmo.util.degrees(45), in_parallel=True).wait_for_completed()  # This will line us
-            driveStraight(-reverseDist,robot)
+            #driveStraight(reverseDist,robot)
             # back up, horizontally.
             # All we have to do is move forward one space, turn left and we're all set.
             driveStraight(space, robot)
@@ -1419,33 +1419,43 @@ def cozmoAlphabet(robot:cozmo.robot.Robot):
 
         if letter == "Y":
             raiseLift(robot)
-            preTurn(robot)
-            raiseTurn("R", robot)
-            driveStraight(segment/2, robot)  # drive us to the bottom of the middle segment
+            driveStraight(-reverseDist,robot)
+            #preTurn(robot)
+            robot.turn_in_place(cozmo.util.degrees(-90), in_parallel=True).wait_for_completed()
+            driveStraight(-reverseDist,robot)
+            driveStraight(reverseDist,robot)
+            #driveStraight(segment/2, robot)  # drive us to the bottom of the middle segment
             preTurn(robot)
             raiseTurn("L", robot)
-            dropLift(robot)
-            driveStraight(segment/2, robot)  # draw the stem of Y
+            #dropLift(robot)
+            driveStraight(segment/3, robot)  # draw the stem of Y
             preTurn(robot)
             raiseTurnL45(robot)  # draw the left diagonal of Y
-            dropLift(robot)
-            driveStraight(segment/2, robot)  # the top prongs of Y should form an equilateral triangle with the top.
+            #dropLift(robot)
+            #driveStraight(segment/2, robot)  # the top prongs of Y should form an equilateral triangle with the top.
             # I don't think there's any special math required.
             preTurn(robot)
-            raiseTurnR135(robot)
-            driveStraight(segment/2, robot)
+            robot.turn_in_place(cozmo.util.degrees(-135), in_parallel=True).wait_for_completed()
+            #driveStraight(segment/2, robot)
+            driveStraight(-reverseDist,robot)
+            driveStraight(reverseDist*1.5,robot)
             preTurn(robot)
-            raiseTurnR135(robot)
+            robot.turn_in_place(cozmo.util.degrees(-135), in_parallel=True).wait_for_completed()
+            driveStraight(-reverseDist,robot)
             dropLift(robot)
-            driveStraight(segment/2, robot)  #this will draw from the top right portion back down to the stem
+            #driveStraight(segment/2, robot)  #this will draw from the top right portion back down to the stem
+            driveStraight(reverseDist,robot)
             preTurn(robot)
-            raiseTurnL45(robot)
-            driveStraight(segment/2, robot)  #traverse to the bottom of the stem.
+            robot.turn_in_place(cozmo.util.degrees(45), in_parallel=True).wait_for_completed()
+            #driveStraight(-reverseDist,robot)
+            driveStraight(reverseDist,robot)
+            #driveStraight(segment/2, robot)  #traverse to the bottom of the stem.
             preTurn(robot)
-            raiseTurn("L", robot)
-            driveStraight((segment/2) + space, robot)  # this will drive the rest of the segment AND the space to the next one.
+            raiseTurn_noDrop("L", robot)
+            driveStraight(space, robot)  # this will drive the rest of the segment AND the space to the next one.
             preTurn(robot)
-            raiseTurn("L", robot)
+            raiseTurn_noDrop("L", robot)
+            driveStraight(reverseDist,robot)
             # DONE
             # I'm still not sure if this will work though.
             # AC - 4/18
@@ -1456,20 +1466,25 @@ def cozmoAlphabet(robot:cozmo.robot.Robot):
             driveStraight(segment, robot)
             preTurn(robot)
             raiseTurn("R", robot)
-            dropLift(robot)
-            driveStraight(segment, robot)  # we have drawn top vertical segment.
+            #dropLift(robot)
+            #driveStraight(segment, robot)  # we have drawn top vertical segment.
             preTurn(robot)
-            raiseTurnR135(robot)
+            #raiseTurnR135(robot)
+            robot.turn_in_place(cozmo.util.degrees(-125), in_parallel=True).wait_for_completed()
+            driveStraight(-(reverseDist),robot)
             dropLift(robot)
-            driveStraight(math.sqrt(2*(segment**2)), robot)  # This should draw the diagonal segment of Z.
+            driveStraight(math.sqrt(2*(reverseDist**2)-15.0), robot)  # This should draw the diagonal segment of Z.
             preTurn(robot)
-            raiseTurnL135(robot)
+            robot.turn_in_place(cozmo.util.degrees(125), in_parallel=True).wait_for_completed()
+            driveStraight(-reverseDist,robot)
             dropLift(robot)
-            driveStraight(segment, robot)
+            driveStraight(reverseDist,robot)
+            #driveStraight(segment, robot)
             raiseLift(robot)
             driveStraight(space, robot)
             preTurn(robot)
-            raiseTurn("L", robot)
+            raiseTurn_noDrop("L", robot)
+            #driveStraight(reverseDist,robot)
             #DONE - Needs testing. 4/22
 
 
