@@ -50,19 +50,20 @@ def cozmo_program(robot: cozmo.robot.Robot):
             for item in instructions:
                 if item == "I":
                     # forward
-                    robot.drive_straight(cozmo.util.distance_mm(406.4),
+                    robot.drive_straight(cozmo.util.distance_mm(656.4),
                                          cozmo.util.speed_mmps(200)).wait_for_completed()
-                    robot.turn_in_place(cozmo.util.degrees(80)).wait_for_completed()
-                    robot.drive_straight(cozmo.util.distance_mm(304.8),
+                    robot.turn_in_place(cozmo.util.degrees(90)).wait_for_completed()
+                    time.sleep(2)
+                    robot.drive_straight(cozmo.util.distance_mm(384.8),
                                          cozmo.util.speed_mmps(200)).wait_for_completed()
                     # sleep
                     time.sleep(10)
 
                     # reverse
-                    robot.drive_straight(cozmo.util.distance_mm(-304.8),
+                    robot.drive_straight(cozmo.util.distance_mm(-384.8),
                                          cozmo.util.speed_mmps(200)).wait_for_completed()
                     robot.turn_in_place(cozmo.util.degrees(-90)).wait_for_completed()
-                    robot.drive_straight(cozmo.util.distance_mm(-406.4),
+                    robot.drive_straight(cozmo.util.distance_mm(-656.4),
                                          cozmo.util.speed_mmps(200)).wait_for_completed()
 
                 if item == "O":
