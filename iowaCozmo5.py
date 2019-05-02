@@ -18,11 +18,10 @@ def cozmo_program(robot: cozmo.robot.Robot):
         s.connect((ip, port))
     except socket_error as msg:
         robot.say_text("socket failed to bind").wait_for_completed()
-
     cont = True
 
-    robot.say_text("ready robot 6").wait_for_completed()
-    robot.turn_in_place(cozmo.util.degrees(-90)).wait_for_completed()
+    robot.say_text("ready robot five").wait_for_completed()
+
     # SET COZMO's NAME
 
     myName2 = 2

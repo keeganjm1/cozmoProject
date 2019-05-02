@@ -20,7 +20,7 @@ def cozmo_program(robot: cozmo.robot.Robot):
         robot.say_text("socket failed to bind").wait_for_completed()
     cont = True
 
-    robot.say_text("ready").wait_for_completed()
+    robot.say_text("ready robot two").wait_for_completed()
 
     # SET COZMO's NAME
 
