@@ -51,6 +51,7 @@ def cozmo_program(robot: cozmo.robot.Robot):
                 if item == "I":
                     # forward
                     #co
+                    #ccc
                     robot.drive_straight(cozmo.util.distance_mm(656.4),
                                          cozmo.util.speed_mmps(200)).wait_for_completed()
                     robot.turn_in_place(cozmo.util.degrees(-90)).wait_for_completed()
