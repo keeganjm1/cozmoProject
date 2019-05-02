@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02aae63c-4382-489f-b44e-1739bb12dbd7" name="Default Changelist" comment="changes to A and new variable">
-      <change afterPath="$PROJECT_DIR$/.idea/cozmoProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/justincase.py" afterDir="false" />
+    <list default="true" id="02aae63c-4382-489f-b44e-1739bb12dbd7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alphabet1.py" beforeDir="false" afterPath="$PROJECT_DIR$/alphabet1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iowaCozmo.py" beforeDir="false" afterPath="$PROJECT_DIR$/iowaCozmo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iowaCozmo0.py" beforeDir="false" afterPath="$PROJECT_DIR$/iowaCozmo0.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iowaCozmo1.py" beforeDir="false" afterPath="$PROJECT_DIR$/iowaCozmo1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iowaCozmo2.py" beforeDir="false" afterPath="$PROJECT_DIR$/iowaCozmo2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iowaCozmo3.py" beforeDir="false" afterPath="$PROJECT_DIR$/iowaCozmo3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iowaCozmo4.py" beforeDir="false" afterPath="$PROJECT_DIR$/iowaCozmo4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iowaCozmo5.py" beforeDir="false" afterPath="$PROJECT_DIR$/iowaCozmo5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iowaCozmo7.py" beforeDir="false" afterPath="$PROJECT_DIR$/iowaCozmo7.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iowaCozmo8.py" beforeDir="false" afterPath="$PROJECT_DIR$/iowaCozmo8.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/justincase.py" beforeDir="false" afterPath="$PROJECT_DIR$/justincase.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,35 +22,183 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/alphabet1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-900">
-              <caret line="807" column="38" selection-start-line="807" selection-start-column="38" selection-end-line="807" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/iowaCozmo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/justincase.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13753">
-              <caret line="817" column="27" selection-start-line="817" selection-start-column="27" selection-end-line="817" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.6934894">
+      <split-first>
+        <splitter split-orientation="horizontal" split-proportion="0.72228086">
+          <split-first>
+            <splitter split-orientation="vertical" split-proportion="0.5">
+              <split-first>
+                <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+                  <file pinned="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/alphabet1.py">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="205">
+                          <caret line="1489" lean-forward="true" selection-start-line="1489" selection-end-line="1489" />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file pinned="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/iowaCozmo.py">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="-595">
+                          <caret line="109" column="63" selection-start-line="109" selection-start-column="63" selection-end-line="109" selection-end-column="63" />
+                          <folding>
+                            <element signature="e#0#12#0" expanded="true" />
+                          </folding>
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file pinned="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/iowaCozmo0.py">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="102">
+                          <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
+                          <folding>
+                            <element signature="e#0#12#0" expanded="true" />
+                          </folding>
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file pinned="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/iowaCozmo1.py">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="85">
+                          <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
+                          <folding>
+                            <element signature="e#0#12#0" expanded="true" />
+                          </folding>
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file pinned="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/iowaCozmo2.py">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="-714">
+                          <folding>
+                            <element signature="e#0#12#0" expanded="true" />
+                          </folding>
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file pinned="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/iowaCozmo4.py">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="85">
+                          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+                          <folding>
+                            <element signature="e#0#12#0" expanded="true" />
+                          </folding>
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file pinned="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/iowaCozmo3.py">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="68">
+                          <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
+                          <folding>
+                            <element signature="e#0#12#0" expanded="true" />
+                          </folding>
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file pinned="false" current-in-tab="true">
+                    <entry file="file://$PROJECT_DIR$/iowaCozmo5.py">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="143">
+                          <caret line="76" column="33" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
+                          <folding>
+                            <element signature="e#0#12#0" expanded="true" />
+                          </folding>
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file pinned="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/iowaCozmo8.py">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state>
+                          <folding>
+                            <element signature="e#0#12#0" expanded="true" />
+                          </folding>
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file pinned="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/iowaCozmo6.py">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="-289">
+                          <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
+                          <folding>
+                            <element signature="e#0#12#0" expanded="true" />
+                          </folding>
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                </leaf>
+              </split-first>
+              <split-second>
+                <leaf>
+                  <file pinned="false" current-in-tab="true">
+                    <entry file="file://$PROJECT_DIR$/iowaCozmo8.py">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="187">
+                          <caret line="77" column="32" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
+                          <folding>
+                            <element signature="e#0#12#0" expanded="true" />
+                          </folding>
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                </leaf>
+              </split-second>
+            </splitter>
+          </split-first>
+          <split-second>
+            <leaf>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/iowaCozmo7.py">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="255">
+                      <caret line="75" column="32" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
+                      <folding>
+                        <element signature="e#0#12#0" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-second>
+        </splitter>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/iowaCozmo2.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="204">
+                  <caret line="75" column="37" selection-start-line="75" selection-start-column="37" selection-end-line="75" selection-end-column="37" />
+                  <folding>
+                    <element signature="e#0#12#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -59,6 +210,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>:</find>
+      <find>if</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -70,6 +222,16 @@
       <list>
         <option value="$PROJECT_DIR$/justincase.py" />
         <option value="$PROJECT_DIR$/alphabet1.py" />
+        <option value="$PROJECT_DIR$/iowaCozmo6.py" />
+        <option value="$PROJECT_DIR$/iowaCozmo.py" />
+        <option value="$PROJECT_DIR$/iowaCozmo2.py" />
+        <option value="$PROJECT_DIR$/iowaCozmo7.py" />
+        <option value="$PROJECT_DIR$/iowaCozmo8.py" />
+        <option value="$PROJECT_DIR$/iowaCozmo0.py" />
+        <option value="$PROJECT_DIR$/iowaCozmo1.py" />
+        <option value="$PROJECT_DIR$/iowaCozmo4.py" />
+        <option value="$PROJECT_DIR$/iowaCozmo3.py" />
+        <option value="$PROJECT_DIR$/iowaCozmo5.py" />
       </list>
     </option>
   </component>
@@ -113,7 +275,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.iowaCozmo">
     <configuration name="alphabet1" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="cozmoProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -135,6 +297,98 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="iowaCozmo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cozmoProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/iowaCozmo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="iowaCozmo0" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cozmoProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/iowaCozmo0.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="iowaCozmo4" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cozmoProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/iowaCozmo4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="iowaCozmo5" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cozmoProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/iowaCozmo5.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.iowaCozmo" />
+        <item itemvalue="Python.iowaCozmo0" />
+        <item itemvalue="Python.iowaCozmo4" />
+        <item itemvalue="Python.iowaCozmo5" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -189,16 +443,70 @@
       <option name="project" value="LOCAL" />
       <updated>1556407353632</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="All letters through I are complete">
+      <created>1556576669746</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1556576669746</updated>
+    </task>
+    <task id="LOCAL-00008" summary="All letters through W are complete">
+      <created>1556668407531</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1556668407531</updated>
+    </task>
+    <task id="LOCAL-00009" summary="The alphabet is complete!">
+      <created>1556730762190</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1556730762190</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Changed distances that didn't upload correctly from github">
+      <created>1556773414467</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1556773414467</updated>
+    </task>
+    <task id="LOCAL-00011" summary="test">
+      <created>1556773614899</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1556773614899</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09709379" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info id="Structure" order="2" weight="0.24966975" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993395" visible="true" weight="0.32956153" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32956153" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5006605" side_tool="true" weight="0.32956153" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24966975" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info id="Structure" order="2" weight="0.24966975" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4993395" visible="true" weight="0.32956153" />
@@ -213,7 +521,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="LETTER K" />
@@ -222,27 +530,123 @@
     <MESSAGE value="Letter R" />
     <MESSAGE value="updated B and D" />
     <MESSAGE value="changes to A and new variable" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes to A and new variable" />
+    <MESSAGE value="All letters through I are complete" />
+    <MESSAGE value="All letters through W are complete" />
+    <MESSAGE value="The alphabet is complete!" />
+    <MESSAGE value="Changed distances that didn't upload correctly from github" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/justincase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="1496" column="33" selection-start-line="1496" selection-start-column="33" selection-end-line="1496" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/alphabet1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-900">
-          <caret line="807" column="38" selection-start-line="807" selection-start-column="38" selection-end-line="807" selection-end-column="38" />
+        <state relative-caret-position="205">
+          <caret line="1489" lean-forward="true" selection-start-line="1489" selection-end-line="1489" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/iowaCozmo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        <state relative-caret-position="-595">
+          <caret line="109" column="63" selection-start-line="109" selection-start-column="63" selection-end-line="109" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/justincase.py">
+    <entry file="file://$PROJECT_DIR$/iowaCozmo2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13753">
-          <caret line="817" column="27" selection-start-line="817" selection-start-column="27" selection-end-line="817" selection-end-column="27" />
+        <state relative-caret-position="-714">
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iowaCozmo7.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="75" column="32" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iowaCozmo8.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iowaCozmo0.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iowaCozmo1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iowaCozmo4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iowaCozmo6.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-289">
+          <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iowaCozmo3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iowaCozmo5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="76" column="33" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

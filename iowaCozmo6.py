@@ -69,6 +69,7 @@ def cozmo_program(robot: cozmo.robot.Robot):
                     pass
                 if item == "O":
                     # forward
+                    #test
                     robot.drive_straight(cozmo.util.distance_mm(152.4),
                                          cozmo.util.speed_mmps(200)).wait_for_completed()
                     robot.turn_in_place(cozmo.util.degrees(-30)).wait_for_completed()
