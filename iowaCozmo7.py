@@ -42,9 +42,6 @@ def cozmo_program(robot: cozmo.robot.Robot):
             s.close()
             quit()
         else:
-            # ---------------------------------------------------------
-            # This is where you need to adjust the program
-            # ---------------------------------------------------------
 
             # inst: 8
             for item in instructions:
@@ -67,28 +64,28 @@ def cozmo_program(robot: cozmo.robot.Robot):
 
                 if item == "O":
                     # forward
-                    robot.drive_straight(cozmo.util.distance_mm(215.9),
+                    robot.drive_straight(cozmo.util.distance_mm(288.9),
                                          cozmo.util.speed_mmps(200)).wait_for_completed()
                     robot.turn_in_place(cozmo.util.degrees(90)).wait_for_completed()
-                    robot.drive_straight(cozmo.util.distance_mm(101.6),
+                    robot.drive_straight(cozmo.util.distance_mm(103.6),
                                          cozmo.util.speed_mmps(200)).wait_for_completed()
                     robot.turn_in_place(cozmo.util.degrees(-45)).wait_for_completed()
                     robot.drive_straight(cozmo.util.distance_mm(63.5),
                                          cozmo.util.speed_mmps(200)).wait_for_completed()
                     # sleep
-                    time.sleep(10)
+                    time.sleep(8)
 
                     # reverse
                     robot.drive_straight(cozmo.util.distance_mm(-63.5),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                                         cozmo.util.speed_mmps(180)).wait_for_completed()
                     robot.turn_in_place(cozmo.util.degrees(45)).wait_for_completed()
-                    robot.drive_straight(cozmo.util.distance_mm(-101.6),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                    robot.drive_straight(cozmo.util.distance_mm(-103.6),
+                                         cozmo.util.speed_mmps(180)).wait_for_completed()
                     robot.turn_in_place(cozmo.util.degrees(
                         -91)).wait_for_completed()  # Gets closer to start with Alex's robot, might vary for others.
                     # robot.turn_in_place(cozmo.util.degrees(-92.5)).wait_for_completed()
-                    robot.drive_straight(cozmo.util.distance_mm(-215.9),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                    robot.drive_straight(cozmo.util.distance_mm(-288.9),
+                                         cozmo.util.speed_mmps(180)).wait_for_completed()
 
                 if item == "W":
                     # forward

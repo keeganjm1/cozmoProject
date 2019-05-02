@@ -60,7 +60,7 @@ def cozmo_program(robot: cozmo.robot.Robot):
                     # forward
                     robot.turn_in_place(cozmo.util.degrees(-90)).wait_for_completed()
                     # sleep
-                    time.sleep(10)
+                    time.sleep(18)
                     # reverse
                     robot.turn_in_place(cozmo.util.degrees(90)).wait_for_completed()
 

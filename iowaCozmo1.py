@@ -78,7 +78,7 @@ def cozmo_program(robot: cozmo.robot.Robot):
                     robot.drive_straight(cozmo.util.distance_mm(63.5),
                                          cozmo.util.speed_mmps(200)).wait_for_completed()
                     # sleep
-                    time.sleep(10)
+                    time.sleep(8)
                     # reverse
                     robot.drive_straight(cozmo.util.distance_mm(-63.5),
                                          cozmo.util.speed_mmps(200)).wait_for_completed()

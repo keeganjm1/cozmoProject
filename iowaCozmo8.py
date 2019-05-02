@@ -68,21 +68,21 @@ def cozmo_program(robot: cozmo.robot.Robot):
 
                 if item == "O":
                     # forward
-                    robot.drive_straight(cozmo.util.distance_mm(292.1),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                    robot.drive_straight(cozmo.util.distance_mm(345),
+                                         cozmo.util.speed_mmps(250)).wait_for_completed()
                     robot.turn_in_place(cozmo.util.degrees(80)).wait_for_completed()
-                    robot.drive_straight(cozmo.util.distance_mm(342.9),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                    robot.drive_straight(cozmo.util.distance_mm(370),
+                                         cozmo.util.speed_mmps(250)).wait_for_completed()
 
                     # sleep
-                    time.sleep(10)
+                    time.sleep(4)
 
                     # reverse
-                    robot.drive_straight(cozmo.util.distance_mm(-342.9),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                    robot.drive_straight(cozmo.util.distance_mm(-370),
+                                         cozmo.util.speed_mmps(250)).wait_for_completed()
                     robot.turn_in_place(cozmo.util.degrees(-80)).wait_for_completed()
-                    robot.drive_straight(cozmo.util.distance_mm(-292.1),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                    robot.drive_straight(cozmo.util.distance_mm(-345),
+                                         cozmo.util.speed_mmps(250)).wait_for_completed()
 
                 if item == "W":
                     # forward
