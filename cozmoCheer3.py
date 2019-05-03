@@ -26,7 +26,7 @@ def cozmo_program(robot: cozmo.robot.Robot):
 
     robot.say_text("ready robot zero").wait_for_completed()
 
-    while 1:
+    while cont:
         bytedata = s.recv(4048)
         data = str(bytedata)
         instructions = bytedata.decode('utf-8')
@@ -36,7 +36,12 @@ def cozmo_program(robot: cozmo.robot.Robot):
             quit()
         else:
 
-            time.sleep(4.5)
+            robot.set_head_angle(cozmo.util.degrees(0)).wait_for_completed()
+            robot.set_lift_height(0).wait_for_completed()
+
+            robot.say_text("Goooooooooooooal!", use_cozmo_voice=True, play_excited_animation=True).wait_for_completed()
+
+            time.sleep(4.5)  # sleep timer for this robot to particpate in the wave
 
             robot.set_lift_height(1.0).wait_for_completed()
             robot.turn_in_place(cozmo.util.degrees(-360)).wait_for_completed()

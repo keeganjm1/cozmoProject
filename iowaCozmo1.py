@@ -46,6 +46,7 @@ def cozmo_program(robot: cozmo.robot.Robot):
             quit()
         else:
 
+
             robot.set_lift_height(0).wait_for_completed()
             robot.set_head_angle(cozmo.util.degrees(0)).wait_for_completed()
 
