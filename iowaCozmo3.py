@@ -74,7 +74,7 @@ def cozmo_program(robot: cozmo.robot.Robot):
                     image = image.resize(cozmo.oled_face.dimensions(), Image.NEAREST)
                     image = cozmo.oled_face.convert_image_to_screen_data(image)
 
-                    seconds = 10
+                    seconds = 12
 
                     robot.say_text("I", duration_scalar=1.5, voice_pitch=0.5).wait_for_completed()
 
@@ -107,7 +107,7 @@ def cozmo_program(robot: cozmo.robot.Robot):
 
                     # forward
                     robot.drive_straight(cozmo.util.distance_mm(25.6),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                                         cozmo.util.speed_mmps(125)).wait_for_completed()
                     robot.turn_in_place(cozmo.util.degrees(45)).wait_for_completed()
                     # sleep
                     #time.sleep(12)
@@ -124,7 +124,7 @@ def cozmo_program(robot: cozmo.robot.Robot):
                     # reverse
                     robot.turn_in_place(cozmo.util.degrees(-45)).wait_for_completed()
                     robot.drive_straight(cozmo.util.distance_mm(-25.6),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                                         cozmo.util.speed_mmps(125)).wait_for_completed()
 
                 if item == "W":
 
@@ -138,7 +138,7 @@ def cozmo_program(robot: cozmo.robot.Robot):
 
                     # forward
                     robot.drive_straight(cozmo.util.distance_mm(165.1),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                                         cozmo.util.speed_mmps(125)).wait_for_completed()
                     # sleep
                     #time.sleep(10)
 
@@ -153,7 +153,7 @@ def cozmo_program(robot: cozmo.robot.Robot):
 
                     # reverse
                     robot.drive_straight(cozmo.util.distance_mm(-165.1),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                                         cozmo.util.speed_mmps(125)).wait_for_completed()
 
                 if item == "A":
 
@@ -167,7 +167,7 @@ def cozmo_program(robot: cozmo.robot.Robot):
 
                     # forward
                     robot.drive_straight(cozmo.util.distance_mm(400.0),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                                         cozmo.util.speed_mmps(125)).wait_for_completed()
                     # sleep
                     #time.sleep(12)
 
@@ -180,7 +180,19 @@ def cozmo_program(robot: cozmo.robot.Robot):
 
                     # reverse
                     robot.drive_straight(cozmo.util.distance_mm(-400.0),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                                         cozmo.util.speed_mmps(125)).wait_for_completed()
+                if item == "G":
+                    robot.set_head_angle(cozmo.util.degrees(0)).wait_for_completed()
+                    robot.set_lift_height(0).wait_for_completed()
+                
+                    robot.say_text("Goooooooooooooal!", use_cozmo_voice=True, play_excited_animation=True).wait_for_completed()
+                
+                    time.sleep(4.5)  # sleep timer for this robot to particpate in the wave
+                
+                    robot.set_lift_height(1.0).wait_for_completed()
+                    robot.turn_in_place(cozmo.util.degrees(-360)).wait_for_completed()
+                    robot.set_lift_height(0).wait_for_completed()
+                    
 
 
 
