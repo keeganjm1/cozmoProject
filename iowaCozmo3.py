@@ -74,7 +74,7 @@ def cozmo_program(robot: cozmo.robot.Robot):
                     image = image.resize(cozmo.oled_face.dimensions(), Image.NEAREST)
                     image = cozmo.oled_face.convert_image_to_screen_data(image)
 
-                    seconds = 12
+                    seconds = 25
 
                     robot.say_text("I", duration_scalar=1.5, voice_pitch=0.5).wait_for_completed()
 
