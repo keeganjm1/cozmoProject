@@ -87,11 +87,11 @@ def cozmo_program(robot: cozmo.robot.Robot):
 
                     # forward
                     robot.drive_straight(cozmo.util.distance_mm(590.4),#was650.4
-                                         cozmo.util.speed_mmps(100)).wait_for_completed()
-                    robot.turn_in_place(cozmo.util.degrees(90)).wait_for_completed()
+                                         cozmo.util.speed_mmps(110)).wait_for_completed()
+                    robot.turn_in_place(cozmo.util.degrees(92)).wait_for_completed()
                     time.sleep(2)
                     robot.drive_straight(cozmo.util.distance_mm(300.8),# was 320.8
-                                         cozmo.util.speed_mmps(100)).wait_for_completed()
+                                         cozmo.util.speed_mmps(110)).wait_for_completed()
                     # sleep
                     #time.sleep(10)
 
@@ -106,10 +106,10 @@ def cozmo_program(robot: cozmo.robot.Robot):
 
                     # reverse
                     robot.drive_straight(cozmo.util.distance_mm(-300.8),#was 320.8
-                                         cozmo.util.speed_mmps(100)).wait_for_completed()
-                    robot.turn_in_place(cozmo.util.degrees(-90)).wait_for_completed()
+                                         cozmo.util.speed_mmps(110)).wait_for_completed()
+                    robot.turn_in_place(cozmo.util.degrees(-92)).wait_for_completed()
                     robot.drive_straight(cozmo.util.distance_mm(-590.4),
-                                         cozmo.util.speed_mmps(100)).wait_for_completed()
+                                         cozmo.util.speed_mmps(110)).wait_for_completed()
 
                 if item == "O":
                     image = Image.open("o.png")
