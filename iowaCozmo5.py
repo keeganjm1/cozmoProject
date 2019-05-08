@@ -74,7 +74,7 @@ def cozmo_program(robot: cozmo.robot.Robot):
                     image = image.resize(cozmo.oled_face.dimensions(), Image.NEAREST)
                     image = cozmo.oled_face.convert_image_to_screen_data(image)
 
-                    seconds = 10
+                    seconds = 12
 
                     robot.say_text("I", duration_scalar=1.5, voice_pitch=0.5).wait_for_completed()
 
@@ -182,6 +182,17 @@ def cozmo_program(robot: cozmo.robot.Robot):
                     # reverse
                     robot.drive_straight(cozmo.util.distance_mm(-400),
                                          cozmo.util.speed_mmps(200)).wait_for_completed()
+                if item =="G":
+                    robot.set_head_angle(cozmo.util.degrees(0)).wait_for_completed()
+                    robot.set_lift_height(0).wait_for_completed()
+                
+                    robot.say_text("Goooooooooooooal!", use_cozmo_voice=True, play_excited_animation=True).wait_for_completed()
+                
+                    time.sleep(7.5)
+                
+                    robot.set_lift_height(1.0).wait_for_completed()
+                    robot.turn_in_place(cozmo.util.degrees(-360)).wait_for_completed()
+                    robot.set_lift_height(0).wait_for_completed()                    
 
 
 
