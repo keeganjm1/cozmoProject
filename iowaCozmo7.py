@@ -224,7 +224,30 @@ def cozmo_program(robot: cozmo.robot.Robot):
                 
                     robot.set_lift_height(1.0).wait_for_completed()
                     robot.turn_in_place(cozmo.util.degrees(-360)).wait_for_completed()
-                    robot.set_lift_height(0).wait_for_completed()                    
+                    robot.set_lift_height(0).wait_for_completed()
+
+                if item == "B":
+                    robot.set_head_angle(cozmo.util.degrees(0)).wait_for_completed()
+                    robot.set_lift_height(0).wait_for_completed()
+
+                    robot.set_lift_height(1).wait_for_completed()
+                    robot.say_text("What a save!", use_cozmo_voice=False, play_excited_animation=True).wait_for_completed()
+                    robot.set_lift_height(0).wait_for_completed()
+
+                    image = Image.open("FSU.png")
+                    image = image.resize(cozmo.oled_face.dimensions(), Image.NEAREST)
+                    image = cozmo.oled_face.convert_image_to_screen_data(image)
+
+                    seconds = 5
+
+                    robot.set_head_angle(cozmo.util.degrees(44.5)).wait_for_completed()
+
+                    for nothing in range(seconds):
+                        robot.display_oled_face_image(image, 1000.0)
+                        time.sleep(1.0)
+                    time.sleep(1.0)
+
+                    robot.set_head_angle(cozmo.util.degrees(0)).wait_for_completed()
 
 
 cozmo.run_program(cozmo_program)
