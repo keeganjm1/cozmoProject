@@ -75,7 +75,7 @@ def cozmo_program(robot: cozmo.robot.Robot):
                     image = image.resize(cozmo.oled_face.dimensions(), Image.NEAREST)
                     image = cozmo.oled_face.convert_image_to_screen_data(image)
 
-                    seconds = 14
+                    seconds = 14.5
 
                     # forward
 
@@ -83,11 +83,11 @@ def cozmo_program(robot: cozmo.robot.Robot):
 
 
                     # forward
-                    robot.drive_straight(cozmo.util.distance_mm(656.4),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                    robot.drive_straight(cozmo.util.distance_mm(590.4),
+                                         cozmo.util.speed_mmps(125)).wait_for_completed()
                     robot.turn_in_place(cozmo.util.degrees(90)).wait_for_completed()
-                    robot.drive_straight(cozmo.util.distance_mm(354.8),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                    robot.drive_straight(cozmo.util.distance_mm(300.8),
+                                         cozmo.util.speed_mmps(125)).wait_for_completed()
                     # sleep
                     #time.sleep(14)
 
@@ -101,11 +101,11 @@ def cozmo_program(robot: cozmo.robot.Robot):
                     robot.set_head_angle(cozmo.util.degrees(0)).wait_for_completed()
 
                     # reverse
-                    robot.drive_straight(cozmo.util.distance_mm(-354.8),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                    robot.drive_straight(cozmo.util.distance_mm(-300.8),
+                                         cozmo.util.speed_mmps(125)).wait_for_completed()
                     robot.turn_in_place(cozmo.util.degrees(-90)).wait_for_completed()
-                    robot.drive_straight(cozmo.util.distance_mm(-656.4),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                    robot.drive_straight(cozmo.util.distance_mm(-590.4),
+                                         cozmo.util.speed_mmps(125)).wait_for_completed()
 
                 if item == "O":
                     image = Image.open("o.png")
@@ -118,13 +118,13 @@ def cozmo_program(robot: cozmo.robot.Robot):
 
                     # forward
                     robot.drive_straight(cozmo.util.distance_mm(288.9),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                                         cozmo.util.speed_mmps(125)).wait_for_completed()
                     robot.turn_in_place(cozmo.util.degrees(90)).wait_for_completed()
                     robot.drive_straight(cozmo.util.distance_mm(103.6),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                                         cozmo.util.speed_mmps(125)).wait_for_completed()
                     robot.turn_in_place(cozmo.util.degrees(-45)).wait_for_completed()
                     robot.drive_straight(cozmo.util.distance_mm(63.5),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                                         cozmo.util.speed_mmps(125)).wait_for_completed()
                     # sleep
                     #time.sleep(8)
 
@@ -161,7 +161,7 @@ def cozmo_program(robot: cozmo.robot.Robot):
 
                     # forward
                     robot.drive_straight(cozmo.util.distance_mm(171.5),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                                         cozmo.util.speed_mmps(125)).wait_for_completed()
                     # sleep
                     #time.sleep(10)
 
@@ -176,7 +176,7 @@ def cozmo_program(robot: cozmo.robot.Robot):
 
                     # reverse
                     robot.drive_straight(cozmo.util.distance_mm(-171.5),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                                         cozmo.util.speed_mmps(125)).wait_for_completed()
 
                 if item == "A":
                     image = Image.open("a.png")
@@ -189,10 +189,10 @@ def cozmo_program(robot: cozmo.robot.Robot):
 
                     # forward
                     robot.drive_straight(cozmo.util.distance_mm(140.1),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                                         cozmo.util.speed_mmps(125)).wait_for_completed()
                     robot.turn_in_place(cozmo.util.degrees(90)).wait_for_completed()
                     robot.drive_straight(cozmo.util.distance_mm(90.0),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                                         cozmo.util.speed_mmps(125)).wait_for_completed()
                     robot.turn_in_place(cozmo.util.degrees(-90)).wait_for_completed()
 
                     # sleep
@@ -210,10 +210,21 @@ def cozmo_program(robot: cozmo.robot.Robot):
                     # reverse
                     robot.turn_in_place(cozmo.util.degrees(90)).wait_for_completed()
                     robot.drive_straight(cozmo.util.distance_mm(-90.0),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                                         cozmo.util.speed_mmps(125)).wait_for_completed()
                     robot.turn_in_place(cozmo.util.degrees(-90)).wait_for_completed()
                     robot.drive_straight(cozmo.util.distance_mm(-140.1),
-                                         cozmo.util.speed_mmps(200)).wait_for_completed()
+                                         cozmo.util.speed_mmps(125)).wait_for_completed()
+                if item == "G":
+                    robot.set_head_angle(cozmo.util.degrees(0)).wait_for_completed()
+                    robot.set_lift_height(0).wait_for_completed()
+                
+                    robot.say_text("Goooooooooooooal!", use_cozmo_voice=True, play_excited_animation=True).wait_for_completed()
+                
+                    time.sleep(10.5)
+                
+                    robot.set_lift_height(1.0).wait_for_completed()
+                    robot.turn_in_place(cozmo.util.degrees(-360)).wait_for_completed()
+                    robot.set_lift_height(0).wait_for_completed()                    
 
 
 cozmo.run_program(cozmo_program)
